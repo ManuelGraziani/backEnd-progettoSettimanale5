@@ -24,7 +24,8 @@ class ProgettoController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user();
+        return view('aggiungiProgetto', compact('user'));
     }
 
     /**
