@@ -7,5 +7,4 @@
     <p>{{ $progetto->descrizione }}</p>
     <!-- Add more details here -->
 </div>
-</div>
 @endsection

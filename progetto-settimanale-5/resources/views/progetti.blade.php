@@ -5,9 +5,9 @@
 <div>
     <button type="button" class="btn btn-primary"><a href="/progetti/create" class="text-white text-decoration-none">Aggiungi progetto</a></button>
 </div>
-@if($user->progetti->isNotEmpty())
+@if($progetti)
 <div class="row">
-@foreach($user->progetti as $progetto)
+@foreach($progetti as $progetto)
     <div class="col">
         <div class="card my-5" style="width: 18rem;">
           

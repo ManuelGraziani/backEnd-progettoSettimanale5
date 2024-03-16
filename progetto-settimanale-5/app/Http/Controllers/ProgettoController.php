@@ -15,8 +15,8 @@ class ProgettoController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        return view('progetti', compact('user'));
+        $progetti = Progetto::where('user_id', Auth::id())->get();
+        return view('progetti', ['progetti' => $progetti]);
     }
 
     /**
@@ -48,7 +48,7 @@ class ProgettoController extends Controller
      */
     public function show(Progetto $progetto)
     {
-        return view('dettaglio', ['progetto' => $progetto] );
+        return view('dettaglio', ['progetto' => $progetto]);
     }
 
     /**
