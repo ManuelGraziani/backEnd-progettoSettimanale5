@@ -19,8 +19,8 @@ class ProgettoFactory extends Factory
     {
         return [
             'user_id' => User::get()->random()->id,
-            'nome' => fake()->name(),
-            'descrizione' => fake()->sentence(),
+            'nome' => fake()->text(50),
+            'descrizione' => fake()->text(),
             'created_at' => now(),
             'updated_at' => now()
         ];

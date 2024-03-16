@@ -33,7 +33,14 @@ class ProgettoController extends Controller
      */
     public function store(StoreProgettoRequest $request)
     {
-        //
+        $user = Auth::user();
+        $progetto = new Progetto();
+        $progetto->user_id = $user->id;
+        $progetto->nome = $request->nome;
+        $progetto->descrizione = $request->descrizione;
+        $progetto->save();
+
+        return redirect()->action([ProgettoController::class, 'index']);
     }
 
     /**
@@ -41,7 +48,7 @@ class ProgettoController extends Controller
      */
     public function show(Progetto $progetto)
     {
-        //
+        return view('dettaglio', ['progetto' => $progetto] );
     }
 
     /**

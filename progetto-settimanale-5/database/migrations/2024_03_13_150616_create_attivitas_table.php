@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('attivitas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_progetto');
-            $table->foreign('id_progetto')->on('progettos')->references('id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('progetto_id');
+            $table->foreign('progetto_id')->references('id')->on('progettos')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nome');
             $table->string('descrizione');
             $table->timestamps();

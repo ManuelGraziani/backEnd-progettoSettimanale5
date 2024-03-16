@@ -18,9 +18,9 @@ class AttivitaFactory extends Factory
     public function definition(): array
     {
         return [
-            'id_progetto' => Progetto::get()->random()->id,
-            'nome' => fake()->sentence(3),
-            'descrizione' => fake()->sentence(),
+            'progetto_id' => Progetto::get()->random()->id,
+            'nome' => fake()->text(),
+            'descrizione' => fake()->text(),
             'created_at' => now(),
             'updated_at' => now()
         ];
