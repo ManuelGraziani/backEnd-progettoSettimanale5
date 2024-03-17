@@ -10,7 +10,7 @@ class Attivita extends Model
 {
     use HasFactory;
 
-    public function attivita(): BelongsTo{
+    public function attivitas(): BelongsTo{
         return $this->belongsTo(Progetto::class);
     }
 }

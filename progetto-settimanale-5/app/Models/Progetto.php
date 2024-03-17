@@ -10,7 +10,7 @@ class Progetto extends Model
 {
     use HasFactory;
 
-    public function attivita(): HasMany{
+    public function attivitas(): HasMany{
         return $this->hasMany(Attivita::class);
     }
 }
