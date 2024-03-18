@@ -33,6 +33,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('/progetti', ProgettoController::class)->middleware('auth');
+Route::resource('/progetti', ProgettoController::class)->middleware('auth', 'verified');
 
-Route::resource('/attivita', AttivitaController::class)->middleware('auth');
+Route::resource('/attivita', AttivitaController::class)->middleware('auth', 'verified');
